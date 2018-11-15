@@ -323,7 +323,7 @@ cell1 = visual_test.cell(row = 1, column = 1)
 cell1.value = null_test 
 
 
-cnt_del_r = max_row
+cnt_del_r = 3
 while True: #добавление функционала от 15.10.2018
 	if  not sheet_fileds['B' + str(cnt_del_r)].value:
 		break
@@ -331,8 +331,8 @@ while True: #добавление функционала от 15.10.2018
 		cnt_del_r += 1
 
 
-
-sheet_fileds.delete_rows(cnt_del_r, 125)
+print(cnt_del_r)
+sheet_fileds.delete_rows(cnt_del_r,125)
 new_File_name = table_name + '_' + str(release)
 print("Сохраняем файл ..")
 os.chdir(result_dir)
